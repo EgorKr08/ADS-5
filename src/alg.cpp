@@ -20,8 +20,9 @@ std::string infx2pstfx(std::string inf) {
             if (stack1.get() == '(')
                 stack1.pop();
         } else if (i == '+' || i == '-' || i == '*' || i == '/') {
-            while (!stack1.isEmpty() && (stack1.get() == '*' || stack1.get() == '/' ||
-                                         (i == '+' || i == '-') && (stack1.get() == '+' || stack1.get() == '-'))) {
+            while (!stack1.isEmpty() && (stack1.get() == '*' ||
+                stack1.get() == '/' || (i == '+' || i == '-') &&
+                (stack1.get() == '+' || stack1.get() == '-'))) {
                 exit += stack1.pop();
                 exit += ' ';
             }
