@@ -6,7 +6,7 @@
 std::string infx2pstfx(std::string inf) {
     TStack<char, 100> stack1;
     std::string exit;
-    for (char i: inf) {
+    for (char i : inf) {
         if (i == '(') {
             stack1.push(i);
         } else if (i >= '0' && i <= '9') {
@@ -39,7 +39,7 @@ std::string infx2pstfx(std::string inf) {
 int eval(std::string pref) {
     TStack<int, 100> stack2;
     std::string sTemp;
-    for (char i: pref) {
+    for (char i : pref) {
         if ((i >= '0' && i <= '9')) {
             sTemp += i;
         } else if (i == ' ' && !sTemp.empty()) {
